@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;       /* to remove defaut browser padding margin */
+}
+
+nav{
+    background-color:rgb(27, 136, 204);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    /* border: 3px solid black; */
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    /* border: 3px solid rebeccapurple; */
+}
+
+@media screen and (max-width: 580px) {
+    nav,ul{
+        flex-direction: column;
+    }
+    ul{
+        align-items: center;
+    }
+}
+
+/* nav bar css is end */
+
+section{
+
+    perspective: 2000px;
+    display: flex;
+    margin: 50px auto;
+    /* border: 2px solid black; */
+    width: 85vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div{
+    height: 250px;
+    width: 400px;
+    border: 1px solid #ccc;
+}
+
+.side-a{
+    background-color: lightsalmon;
+    z-index: 1;
+}
+
+.side-a img{
+    /* height: 100%;
+    width: 100%; */    /* both are working because % take hight according to its parent hight,width */
+    height: 250px;
+    width: 400px;
+}
+
+.side-b{
+    background-color: lightgreen;
+    transform: rotateY(180deg);
+}
+
+.side-b{
+    font-size: 20px;
+    text-align: center;
+}
+
+.side-a,.side-b{
+    position: absolute;
+    backface-visibility: hidden;   /* to hide back-face visivility */
+}
+
+.wrapper{
+    padding: 10px;
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d; /* this is work only if back-face visivility is on */
+}
+ 
+.wrapper:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
