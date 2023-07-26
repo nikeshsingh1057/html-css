@@ -1,0 +1,75 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+#container{
+
+    width: 75vw;
+    /* border: 1px solid #ccc; */
+    margin: 50px auto;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
+    grid-auto-rows: 200px;  /*gird auto row use hota auto row dene ke liye like grid templet row */
+
+}
+div{
+    position: relative;     /* since hume camera wala icon ko beech me lana hai hence iske parent bana diye hai i.e reletive de kar diye and <i> tak ko absolute kar denge.*/
+}
+div i{
+    position: absolute;     /* now ye absolute ho gaya so isko overlap karwa do using left and top*/
+    left: 45%;
+    top: 46%;
+    z-index: 1;
+    transform: scale(0);
+    transition: 100ms;
+}
+div img{     /* aisa karne se image particular div ke hight ke according set ho jayega yani dabba ke andar aa jayega*/
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+/* transistion effect dene ke liye */
+div img:hover{
+    
+    opacity: 0.3;
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition:100ms;
+}
+div:hover i{
+    transform: scale(2.5);
+}
+nav{
+    background-color:#343a40;
+}
+
+nav ul{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li{
+
+    display: inline-block;   /*blok element bana diye*/
+    padding: 8px 0px;
+    margin-left: 120px;
+}
+section:first-of-type{
+   width: 75vw;
+   background-color: #dee2e6;
+   margin:30px auto;
+   border-radius: 10px;
+   padding: 16px;
+   font-family: Arial, Helvetica, sans-serif;
+}
