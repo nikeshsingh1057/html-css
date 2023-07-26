@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;       /* to remove defaut browser */
+}
+
+nav{
+    background-color:rgb(29, 149, 223);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 580px) {
+    nav,ul{
+        flex-direction: column;
+    }
+    ul{
+        align-items: center;
+    }
+}
+
+/*  nav bar css is end */
+
+section{
+    width: 75vw;
+    margin: 30px auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figure{
+    width: 300px;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin: 10px;
+    transition: 200ms;
+    box-shadow: 3px 8px 5px gray;
+}
+
+figure img{
+    height: 230px;
+    width:  95%;
+    padding: 8px;
+}
+
+button{
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 3px solid black;
+}
+
+button:hover{
+    background-color: greenyellow;
+    transition: 500ms;
+}
+
+figure:hover{
+    transform: scale(1.03);
+}
+
