@@ -1,0 +1,50 @@
+body{
+    perspective: 800px;
+}
+
+div{
+    height: 250px;
+    width: 400px;
+    border: 1px solid #ccc;
+    
+}
+
+.side-a{
+    background-color: lightsalmon;
+    z-index: 1;
+}
+
+.side-a img{
+    /* height: 100%;
+    width: 100%; */    /* both are working because % take hight according to its parent hight,width */
+    height: 250px;
+    width: 400px;
+}
+
+.side-b{
+    background-color: lightgreen;
+    transform: rotateY(180deg);
+}
+
+.side-b{
+    font-size: 20px;
+    text-align: center;
+}
+
+.side-a,.side-b{
+    position: absolute;
+    backface-visibility: hidden;   /* to hide back-face visivility */
+}
+
+.wrapper{
+    
+    position: relative;
+    transition: 1s;
+    margin: 30px auto;
+    transform-style: preserve-3d; /*this is work only if back-face visivility is on*/
+}
+ 
+.wrapper:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
