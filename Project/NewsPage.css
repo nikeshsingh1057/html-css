@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+
+    border: 15px solid gray;
+    width: 70vw;
+    height: 70vh;
+    margin: 30px auto;
+    padding: 16px;
+    letter-spacing: 0.12rem;
+    overflow-y: scroll;
+    
+}
+
+img{
+    float: left;
+    height: 500px;
+    width: 500px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+#bottom{
+    clear: left;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
